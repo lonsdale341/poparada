@@ -14,6 +14,7 @@ class ConcretStateSelectedPanel1 : StateSelectedPanel1
             if (i == mode)
             {
                 DataLevel.Instance.check_box_Panel1[i].SetActive(true);
+                
             }
         }
         switch (mode)
@@ -24,6 +25,9 @@ class ConcretStateSelectedPanel1 : StateSelectedPanel1
                 DataLevel.Instance.NumberModel = 0;
                 DataLevel.Instance.CurrentModel = DataLevel.Instance.Oxford;
                 DataLevel.Instance.Oxford.SetActive(true);
+                DataLevel.Instance.Oxford.transform.localPosition=new Vector3(0,0,0);
+                DataLevel.Instance.Oxford.transform.eulerAngles=new Vector3(0,0,0);
+                DataLevel.Instance.Oxford.transform.localScale = new Vector3(0.5022258f, 0.5022258f, 0.5022258f);
                 DataLevel.Instance.Bond.SetActive(false);
                 DataLevel.Instance.Zeus.SetActive(false);
                 DataLevel.Instance.Queens.SetActive(false);
@@ -34,6 +38,9 @@ class ConcretStateSelectedPanel1 : StateSelectedPanel1
                 DataLevel.Instance.CurrentModel = DataLevel.Instance.Bond;
                 DataLevel.Instance.Oxford.SetActive(false);
                 DataLevel.Instance.Bond.SetActive(true);
+                DataLevel.Instance.Bond.transform.localPosition=new Vector3(0,0,0);
+                DataLevel.Instance.Bond.transform.eulerAngles=new Vector3(0,0,0);
+                DataLevel.Instance.Bond.transform.localScale = new Vector3(0.47f, 0.47f, 0.47f);
                 DataLevel.Instance.Zeus.SetActive(false);
                 DataLevel.Instance.Queens.SetActive(false);
                 break;
@@ -44,6 +51,9 @@ class ConcretStateSelectedPanel1 : StateSelectedPanel1
                 DataLevel.Instance.Oxford.SetActive(false);
                 DataLevel.Instance.Bond.SetActive(false);
                 DataLevel.Instance.Zeus.SetActive(true);
+                DataLevel.Instance.Zeus.transform.localPosition=new Vector3(0,0,0);
+                DataLevel.Instance.Zeus.transform.eulerAngles=new Vector3(0,0,0);
+                DataLevel.Instance.Zeus.transform.localScale = new Vector3(0.175f, 0.175f, 0.175f);
                 DataLevel.Instance.Queens.SetActive(false);
                 break;
             case 3:
@@ -54,6 +64,9 @@ class ConcretStateSelectedPanel1 : StateSelectedPanel1
                 DataLevel.Instance.Bond.SetActive(false);
                 DataLevel.Instance.Zeus.SetActive(false);
                 DataLevel.Instance.Queens.SetActive(true);
+                DataLevel.Instance.Queens.transform.localPosition=new Vector3(0,0,0);
+                DataLevel.Instance.Queens.transform.eulerAngles=new Vector3(0,0,0);
+                DataLevel.Instance.Queens.transform.localScale = new Vector3(0.46f, 0.46f, 0.46f);
                 break;
         }
     }
