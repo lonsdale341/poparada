@@ -10,7 +10,8 @@ using System.Collections;
         DataLevel.Instance.MenuIconSate.SetActive(false);
         DataLevel.Instance.MenuSate.SetActive(false);
         DataLevel.Instance.Foto_panel2.SetActive(false);
-        TweenPosition.Begin(DataLevel.Instance.Panel_2, 0.2f, new Vector3(DataLevel.Instance.Panel_2.transform.localPosition.x, DataLevel.Instance.Y_start_Panel2 - 900, DataLevel.Instance.Panel_2.transform.localPosition.z));
+
+        TweenPosition tp1= TweenPosition.Begin(DataLevel.Instance.Panel_2, 0.2f, new Vector3(DataLevel.Instance.Panel_2.transform.localPosition.x, DataLevel.Instance.Y_start_Panel2 - 900f, DataLevel.Instance.Panel_2.transform.localPosition.z));
         DataLevel.Instance.Arrow_Up_Panel_2.SetActive(true);
     }
 
@@ -18,4 +19,5 @@ using System.Collections;
     {
         context.State=new StatePositionUpForPanel2();
     }
+    
 }

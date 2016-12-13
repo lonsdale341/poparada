@@ -100,6 +100,9 @@ public class DataLevel : SingletonBehaviour<DataLevel>
     // Use this for initialization
     private void Start()
     {
+        Y_start_Panel1 = Panel_1.transform.localPosition.y;
+        Y_start_Panel2 = Panel_2.transform.localPosition.y;
+        Y_start_Panel3 = Panel_3.transform.localPosition.y;
         CurrentBlockPanel_2 = 1;
         CurrentBlockPanel_3 = 1;
         CurrentShader_Flower_UP=46;
@@ -108,9 +111,7 @@ public class DataLevel : SingletonBehaviour<DataLevel>
         CurrentShader_Comfort_Down=49;
         CurrentShader_Sofa_UP=34;
         CurrentShader_Sofa_Down=12;
-        Y_start_Panel1 = Panel_1.transform.localPosition.y;
-        Y_start_Panel2 = Panel_2.transform.localPosition.y;
-        Y_start_Panel3 = Panel_3.transform.localPosition.y;
+       
         for (int i = 0; i < check_box_Panel2.Length; i++)
         {
             check_box_Panel2[i].GetComponentInParent<ButtonSelectedPanel_2>().Mode = i;
