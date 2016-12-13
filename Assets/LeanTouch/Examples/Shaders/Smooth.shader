@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "Lean/Smooth"
 {
 	Properties
@@ -52,10 +54,10 @@ Shader "Lean/Smooth"
 
 			void Vert(a2v i, out v2f o)
 			{
-				float4 wVertex = mul(_Object2World, i.vertex);
+				float4 wVertex = mul(unity_ObjectToWorld, i.vertex);
 
 				o.vertex = mul(UNITY_MATRIX_MVP, i.vertex);
-				o.normal = mul((float3x3)_Object2World, i.normal);
+				o.normal = mul((float3x3)unity_ObjectToWorld, i.normal);
 				o.facing = _WorldSpaceCameraPos - wVertex.xyz;
 			}
 
