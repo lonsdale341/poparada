@@ -37,6 +37,7 @@ public class DataLevel : SingletonBehaviour<DataLevel>
     public GameObject screenFoto;
     public GameObject sreenCamera;
     public GameObject screenExit_App;
+    public GameObject screenInfoPanel_1;
     public GameObject []Label_Text_Panel2;
     public GameObject[] Label_Text_Panel3;
     public GameObject Arrow_Top_Right_Panel1;
@@ -52,6 +53,7 @@ public class DataLevel : SingletonBehaviour<DataLevel>
     public GameObject Mail_panel3;
     public GameObject Web_panel2;
     public GameObject Web_panel3;
+    public GameObject Info_panel1;
     public int Count_Shaders;
     public int NumberModel;
     public GameObject Arrow_Up_Panel_1;
@@ -76,6 +78,7 @@ public class DataLevel : SingletonBehaviour<DataLevel>
     private ContextStatePanel stateActivePanel3;
     private ContextStatePanel stateActivePanel_Foto;
     private ContextStatePanel stateActivePanel_Camera;
+    private ContextStatePanel stateActivePanel_Info_P1;
     private ContextStatePanel stateScrollPanel2;
     private ContextStatePanel stateArrowscrollPanel2;
     private ContextStatePanel stateActionPanel_ExitApp;
@@ -148,6 +151,7 @@ public class DataLevel : SingletonBehaviour<DataLevel>
         stateActionPanel_ExitApp=new ContextStatePanel(new StateActivePanel_Exit_Off());
         stateMemuSate=new ContextStatePanel(new StateActivePanel_MenuSite_Off());
         stateMemuSate2 = new ContextStatePanel(new StateActivePanel_MenuSite2_Off());
+        stateActivePanel_Info_P1=new ContextStatePanel(new StateActivePanel_Info_Panel1_Off());
     }
 
     public void SetStartStatePanel1()
@@ -261,6 +265,10 @@ public class DataLevel : SingletonBehaviour<DataLevel>
     public void ReguestSetActivePanel_ExitApp()
     {
         stateActionPanel_ExitApp.Reguest();
+    }
+    public void ReguestSetActivePanel_Info_P1()
+    {
+        stateActivePanel_Info_P1.Reguest();
     }
     // Update is called once per frame
     void Update()
